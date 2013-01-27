@@ -1,0 +1,58 @@
+{
+  "Default format": "JSON",
+  "Running environment": "Ubuntu",
+  "node.js version": "v0.8.16",
+  "express version": "3.0.3",
+  "Initialization": "at /web_gallery run: node app"
+}
+
+How to test: At the directory ./client/, run those shell scripts like typing "bash name.sh" to test every to demonstrate the working states(whose meaning are shown as file name) of the server.
+If an error occurs and leads the server can not restart any more, do the following:
+  1. Delete the collections.json
+  2. Make a copy of the collectionsCOPY.json
+  3. Rename it to collections.json
+
+
+
+Architectural Overview
+
+ Collections 
+   |-----Album List
+   |-----Album ID1
+   |       |----Matadata
+   |       |       |---- Album Name
+   |       |       |---- [Others]
+   |       |       
+   |       |
+   |       |
+   |       |
+   |       |----Comments
+   |       |   
+   |       |----Image List
+   |       |   
+   |       |----Photo ID1
+   |       |        |----Metadata
+   |       |        |       |---- Photo Name
+   |       |        |       |---- [Others] 
+   |       |        |
+   |       |        |----Comments
+   |       |                |
+   |       |                |---- Comment ID1
+   |       |                |---- Comment ID2
+   |       |               
+   |       |        
+   |       |----Photo ID3
+   |       |        |----Metadata
+   |       |        |----Comments
+   |     Album ID2
+   |       |----Metadata
+   |       |----Comments
+           |   
+           |----Image List
+           |
+           |----Photo ID2
+           |       |----Metadata
+           |       |----Comments
+           |----Photo ID4
+           |       |----Metadata
+           |       |----Comments
